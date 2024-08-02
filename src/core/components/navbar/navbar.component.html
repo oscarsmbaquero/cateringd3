@@ -2,7 +2,7 @@
   class="navbar navbar-expand-md sticky-top"
   style="background-color:black"
   >
-  <div class="container-fluid">
+  <div class="container-fluid justify-content-center">
     <!-- rgb(37, 42, 42);  src="{{ logoUrl }}"-->
     <!--style="background-color: rgb(37, 42, 42)"-->
     <a class="navbar-brand" [routerLink]="['']">
@@ -42,7 +42,7 @@
     <div class="collapse navbar-collapse" id="navbarScroll">
       <!--primera lista-->
       <ul
-        class="navbar-nav me-auto my-2 my-lg-0">
+        class="navbar-nav me-auto my-2 my-lg-0" style="padding: 15px">
         <li class="nav-item" routerLinkActive="active"
         (click)="selectOption('home')" [class.selected]="selectedOption === 'home'">
           <a
