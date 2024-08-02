@@ -1,22 +1,26 @@
 .image-container {
-    height: 50vh; /* Ajusta la altura en función de la altura de la ventana */
-    overflow: hidden;
-    margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    padding-top: 25px;
+  height: 50vh; /* Ajusta la altura en función de la altura de la ventana */
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-top: 25px;
+}
+
+.parallax-image {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+  .image-container {
+    height: 60vh;
   }
-  
-  .image-container.in-view {
-    opacity: 1;
-    transform: translateY(0);
+}
+
+@media (max-width: 576px) {
+  .image-container {
+    height: 70vh;
   }
-  
-  .parallax-image {
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
+}
