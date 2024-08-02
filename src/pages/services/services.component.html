@@ -1,1 +1,7 @@
-<p>services works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-12 image-container" *ngFor="let image of images">
+        <div class="parallax-image" [style.background-image]="'url(' + image + ')'"></div>
+      </div>
+    </div>
+  </div>

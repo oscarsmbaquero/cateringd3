@@ -1,0 +1,22 @@
+.image-container {
+    height: 50vh; /* Ajusta la altura en función de la altura de la ventana */
+    overflow: hidden;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    padding-top: 25px;
+  }
+  
+  .image-container.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .parallax-image {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
