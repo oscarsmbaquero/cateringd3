@@ -1,14 +1,84 @@
-.box { 
-    width: 350px;
-    height: 100%; 
+.box {
+    width: 100%;
+    max-width: 350px;
     background: #d64a12;
-    color: #979db4; border:5px solid #fff;
-    box-shadow:0px 0px 3px #202746;
-    margin:10vh 2vh;
+    color: #979db4;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 3px #202746;
+    margin: 10vh 2vh;
     text-transform: uppercase;
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 25px;
-    
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: calc(1em + 1vw); /* Ajuste del tamaño de fuente responsivo */
+    overflow-wrap: break-word; /* Permite que el texto se ajuste dentro del recuadro */
+}
+
+h3 {
+    margin: 0; /* Remueve los márgenes por defecto */
+    padding-bottom: 10px; /* Espacio debajo del título */
+}
+
+hr {
+    width: 80%;
+    border: 1px solid #fff;
+    margin: 10px 0; /* Espacio alrededor de la línea */
+}
+
+p {
+    margin: 0; /* Remueve los márgenes por defecto */
+    overflow-wrap: break-word; /* Asegura que el texto se ajuste dentro del recuadro */
+    word-break: break-word; /* Permite que las palabras largas se rompan y ajusten dentro del recuadro */
+}
+
+.box1 {
+    width: 100%;
+    max-width: 350px;
+    background: #4012d6;
+    color: #979db4;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 3px #202746;
+    margin: 10vh 2vh;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: calc(1em + 1vw); /* Ajuste del tamaño de fuente responsivo */
+    overflow-wrap: break-word; /* Permite que el texto se ajuste dentro del recuadro */
+}
+
+h3 {
+    margin: 0; /* Remueve los márgenes por defecto */
+    padding-bottom: 10px; /* Espacio debajo del título */
+}
+
+hr {
+    width: 80%;
+    border: 1px solid #fff;
+    margin: 10px 0; /* Espacio alrededor de la línea */
+}
+
+p {
+    margin: 0; /* Remueve los márgenes por defecto */
+    overflow-wrap: break-word; /* Asegura que el texto se ajuste dentro del recuadro */
+    word-break: break-word; /* Permite que las palabras largas se rompan y ajusten dentro del recuadro */
+}
+
+@media (max-width: 600px) {
+    .box {
+        font-size: calc(0.8em + 1vw); /* Ajuste de tamaño de fuente para pantallas más pequeñas */
+        padding: 20px;
     }
+    .box1 {
+        font-size: calc(0.8em + 1vw); /* Ajuste de tamaño de fuente para pantallas más pequeñas */
+        padding: 20px;
+    }
+}
