@@ -15,36 +15,34 @@
       />&nbsp;
     </a>
     <label
-    class="hamburger navbar-toggler"
-    type="button"
-    data-bs-toggle="collapse"
-    data-bs-target="#navbarScroll"
-    aria-controls="navbarScroll"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-    style="border: none"
-  >
-    <!-- </button> -->
-    <input type="checkbox" />
-    <svg viewBox="0 0 32 32">
-      <path
-        class="line line-top-bottom"
-        d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
-        [style.stroke]="currentTheme === 'dark' ? '#fff' : '#000'"
-      ></path>
-      <path
-        class="line"
-        [style.stroke]="currentTheme === 'dark' ? '#fff' : '#000'"
-        d="M7 16 27 16"
-      ></path>
-    </svg>
-  </label>
+      class="hamburger navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      style="border: none"
+    >
+      <!-- </button> -->
+      <input type="checkbox" />
+      <svg viewBox="0 0 32 32">
+        <path
+          class="line line-top-bottom"
+          d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+          [style.stroke]="currentTheme === 'dark' ? '#fff' : '#fff'"
+        ></path>
+        <path
+          class="line"
+          [style.stroke]="currentTheme === 'dark' ? '#fff' : '#fff'"
+          d="M7 16 27 16"
+        ></path>
+      </svg>
+    </label>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <!--primera lista-->
       <ul
-        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-        style="--bs-scroll-height: 100px"
-      >
+        class="navbar-nav me-auto my-2 my-lg-0">
         <li class="nav-item" routerLinkActive="active"
         (click)="selectOption('home')" [class.selected]="selectedOption === 'home'">
           <a
@@ -58,7 +56,7 @@
           >
         </li>
         <hr class="dropdown-divider" />
-        <li (click)="selectOption('productos')" [class.selected]="selectedOption === 'productos'" class="nav-item" routerLinkActive="active">
+        <li (click)="selectOption('about')" [class.selected]="selectedOption === 'about'" class="nav-item" routerLinkActive="active">
           <a
             class="nav-link"
             [routerLink]="['/about_us']"
@@ -74,7 +72,7 @@
           >
         </li>
         <hr class="dropdown-divider" />
-        <li (click)="selectOption('productos')" [class.selected]="selectedOption === 'productos'" class="nav-item" routerLinkActive="active">
+        <li (click)="selectOption('servicios')" [class.selected]="selectedOption === 'servicios'" class="nav-item" routerLinkActive="active">
           <a
             class="nav-link"
             [routerLink]="['/servicios']"
@@ -90,10 +88,10 @@
           >
         </li>
         <hr class="dropdown-divider" />
-        <li (click)="selectOption('productos')" [class.selected]="selectedOption === 'productos'" class="nav-item" routerLinkActive="active">
+        <li (click)="selectOption('contact')" [class.selected]="selectedOption === 'contact'" class="nav-item" routerLinkActive="active">
           <a
             class="nav-link"
-            [routerLink]="['/services']"
+            [routerLink]="['/contact']"
             data-toggle="collapse"
             data-target=".navbar-collapse.show"
             ><span

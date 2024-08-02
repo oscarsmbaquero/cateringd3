@@ -13,7 +13,7 @@ import { NavbarService } from '../../services/navbarService/navbar.service';
 })
 export class NavbarComponent {
 
-  currentTheme: any
+  currentTheme = 'dark';
 
   selectedOption: any;
 
