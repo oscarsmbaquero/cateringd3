@@ -5,6 +5,7 @@
   overflow: hidden;
 }
 
+/* Estilo de fondo parallax */
 .parallax-background {
   position: absolute;
   top: 0;
@@ -18,12 +19,12 @@
   z-index: -1;
 }
 
-/* Estilo para centrar el formulario */
+/* Estilo para el contenedor del formulario */
 .form-container {
   display: flex;
   justify-content: center; /* Centrar horizontalmente */
   align-items: center; /* Centrar verticalmente */
-  height: 100vh; /* Altura de la ventana de visualización */
+  height: 100vh; 
   position: relative;
   z-index: 1;
 }
@@ -44,7 +45,7 @@ form {
 
 @media (min-width: 768px) {
   form {
-    grid-template-columns: repeat(1, 1fr); /* Tres columnas en pantallas grandes */
+    grid-template-columns: repeat(1, 1fr); /* Una columna en pantallas grandes */
     grid-template-rows: auto auto; /* Dos filas automáticas */
   }
 }
@@ -68,4 +69,17 @@ button[mat-raised-button] {
   color: white;
   border-radius: 18px;
   margin: 0 auto;
+}
+
+/* Ajustes específicos para dispositivos móviles */
+@media (max-width: 767px) {
+  .form-container {
+    height: auto; /* Permite que el contenedor crezca según el contenido */
+    padding: 20px; /* Añade algo de padding alrededor del contenedor */
+  }
+  
+  form {
+    width: 100%;
+    padding: 20px;
+  }
 }
