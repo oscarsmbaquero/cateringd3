@@ -1,38 +1,39 @@
 <div class="form-container">
-  <form>
+  <form novalidate (ngSubmit)="onSubmit()" [formGroup]="contact" style="margin-top: 25px;">
     <p-floatLabel>
-      <input pInputText id="name" [(ngModel)]="value" name="username1" />
-      <label for="username1">Nombre</label>
+      <input pInputText id="name" formControlName="name"/>
+      <label for="username1">Nombre*</label>
     </p-floatLabel>
     <p-floatLabel>
-      <input pInputText id="mail" [(ngModel)]="value" name="username2" />
-      <label for="username2">Mail</label>
+      <input pInputText id="mail" formControlName="mail" />
+      <label for="username2">Mail*</label>
     </p-floatLabel>
     <p-floatLabel>
-      <input pInputText id="username3" [(ngModel)]="value" name="username3" />
-      <label for="username3">Username 3</label>
+      <input pInputText id="tlf" formControlName="tlf"  />
+      <label for="username3">Teléfono</label>
     </p-floatLabel>
-    <p-floatLabel>
-      <input pInputText id="username4" [(ngModel)]="value" name="username4" />
-      <label for="username4">Username 4</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input pInputText id="username5" [(ngModel)]="value" name="username5" />
-      <label for="username5">Username 5</label>
-    </p-floatLabel>
+    <small id="username-help"><span style="color:white">Dejanos tu tlf y contactaremos mas rapidamente.</span>      
+  </small>
     <p-floatLabel>
       <textarea 
         id="float-input" 
         rows="5" 
         cols="30" 
-        pInputTextarea>
+        pInputTextarea
+        formControlName="messagge"
+        >
       </textarea>
-      <label for="float-input">Mensaje</label>
+      <label for="float-input">Explicanos detalladamente tu evento*</label>
     </p-floatLabel>
-    <p-button 
+    <button *ngIf="contact.valid"
+    mat-raised-button
+    color="primary">
+    Enviar
+  </button>
+    <!-- <p-button 
       label="Aceptar" 
       icon="pi pi-check" 
       [loading]="loading" 
-      (onClick)="load()" />
+      (onClick)="load()" /> -->
   </form>
 </div>

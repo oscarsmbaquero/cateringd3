@@ -8,13 +8,16 @@
 
 /* Estilo del formulario */
 form {
-  background-color: rgb(246, 241, 241); /* Color de fondo del formulario */
+  background-color: rgb(49, 44, 44); /* Color de fondo del formulario */
   padding: 30px; /* Espaciado interno del formulario */
+  padding-top: 80px;
   border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra del formulario */
   display: grid;
+  width: 400px;
   grid-template-columns: 1fr; /* Una columna por defecto */
-  gap: 15px; /* Espaciado entre los campos */
+  gap: 25px; /* Espaciado entre los campos */
+  margin: 10px;
 }
 
 @media (min-width: 768px) {
@@ -25,7 +28,7 @@ form {
 }
 
 /* Estilo para el p-floatLabel */
-p-floatLabel {
+.p-floatLabel {
   display: block; /* Asegurarse de que el contenedor ocupe todo el ancho disponible */
 }
 
@@ -33,4 +36,14 @@ input[pInputText],
 textarea[pInputTextarea] {
   width: 100%; /* Asegura que los inputs y textarea ocupen todo el ancho del contenedor */
   box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+ /* Estilos para centrar el botón horizontalmente */
+ button[mat-raised-button] {
+  display: block;
+  width: 120px;
+  background-color: blue;
+  color: white;
+  border-radius: 18px;
+  margin: 0 auto;
 }
