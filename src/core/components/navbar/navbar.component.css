@@ -138,3 +138,9 @@ span {
     }
    
 }
+
+.dropdown-divider {
+  width: 80%;
+  border: 0.3px solid #fff;
+  margin: 1px 0; /* Ajusta los márgenes según sea necesario */
+}
