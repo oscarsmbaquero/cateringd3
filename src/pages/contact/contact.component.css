@@ -1,7 +1,7 @@
 /* Estilo para el contenedor de parallax */
 .parallax-container {
   position: relative;
-  height: 65vh; /* Ajusta la altura según tus necesidades */
+  height: 100vh; /* Ajusta la altura según tus necesidades */
   overflow: hidden;
 }
 
@@ -73,6 +73,9 @@ button[mat-raised-button] {
 
 /* Ajustes específicos para dispositivos móviles */
 @media (max-width: 767px) {
+  .parallax-container{
+height: 65vh;
+  }
   .form-container {
     height: auto; /* Permite que el contenedor crezca según el contenido */
     padding: 20px; /* Añade algo de padding alrededor del contenedor */
