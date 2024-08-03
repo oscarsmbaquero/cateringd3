@@ -1,6 +1,6 @@
 <div class="parallax-container">
   <div class="parallax-background" #parallaxBackground></div>
-  <div class="form-container">
+  <div class="form-container container-fluid d-flex align-items-center justify-content-center">
     <form novalidate (ngSubmit)="onSubmit()" [formGroup]="contact">
       <p-floatLabel>
         <input pInputText id="name" formControlName="name"/>
