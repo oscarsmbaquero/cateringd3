@@ -1,7 +1,7 @@
 /* Estilo para el contenedor de parallax */
 .parallax-container {
   position: relative;
-  height: 70vh; /* Ajusta la altura según tus necesidades */
+  height: 80vh; /* Ajusta la altura según tus necesidades */
   overflow: hidden;
 }
 
