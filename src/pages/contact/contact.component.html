@@ -14,7 +14,7 @@
         <input pInputText id="tlf" formControlName="tlf"  />
         <label for="username3">Teléfono</label>
       </p-floatLabel>
-      <small id="username-help"><span style="color:white">Dejanos tu tlf y contactaremos más rápidamente.</span></small>
+      <!-- <small id="username-help"><span style="color:white">Déjanos tu tlf para comunicarnos mas rapidamente</span></small> -->
       <p-floatLabel>
         <textarea 
           id="float-input" 
@@ -25,7 +25,8 @@
         </textarea>
         <label for="float-input">Explícanos detalladamente tu evento*</label>
       </p-floatLabel>
-      <button *ngIf="contact.valid"
+      <!-- *ngIf="contact.valid" -->
+      <button 
         mat-raised-button
         color="primary">
         Enviar

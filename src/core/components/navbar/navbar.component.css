@@ -131,10 +131,16 @@ span {
   
   
   @media screen and (max-width: 768px) {
-    .selected {
+    /* .selected {
       border-bottom: 3px solid rgb(226, 209, 52);
       width: 40px;
       font-weight: bold;
+    } */
+    .selected span {
+      /* color: blue; */
+      font-weight: bold;
+      color: rgb(226, 209, 52);
+      /* O cualquier estilo de subrayado deseado */
     }
     .dropdown-divider {
       width: 80%;
