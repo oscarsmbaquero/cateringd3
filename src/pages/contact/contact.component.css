@@ -74,7 +74,7 @@ button[mat-raised-button] {
 /* Ajustes específicos para dispositivos móviles */
 @media (max-width: 767px) {
   .parallax-container{
-height: 65vh;
+   height: 85vh;
   }
   .form-container {
     height: auto; /* Permite que el contenedor crezca según el contenido */

@@ -136,11 +136,11 @@ span {
       width: 40px;
       font-weight: bold;
     }
+    .dropdown-divider {
+      width: 80%;
+      border: 0.3px solid #fff;
+      margin: 1px 0; /* Ajusta los márgenes según sea necesario */
+    }
    
 }
 
-.dropdown-divider {
-  width: 80%;
-  border: 0.3px solid #fff;
-  margin: 1px 0; /* Ajusta los márgenes según sea necesario */
-}
