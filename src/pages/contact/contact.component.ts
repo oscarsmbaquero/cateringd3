@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
@@ -19,11 +19,14 @@ export class ContactComponent {
 
   public contact: FormGroup;
 
+  @ViewChild('parallaxBackground') parallaxBackground!: ElementRef ;
+
   loading: boolean = false;
   public submitted: boolean = false;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private renderer: Renderer2
     
   ) {
     this.contact = this.formBuilder.group({
@@ -40,6 +43,16 @@ export class ContactComponent {
       setTimeout(() => {
           this.loading = false
       }, 2000);
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(): void {
+    const offset = window.pageYOffset;
+    this.renderer.setStyle(
+      this.parallaxBackground.nativeElement,
+      'backgroundPositionY',
+      `${offset * 0.5}px`
+    );
   }
 
   public onSubmit(): void {
