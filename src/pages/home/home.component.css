@@ -5,7 +5,6 @@
     border: 5px solid #fff;
     /* box-shadow: 0px 0px 3px #202746; */
     margin: 2vh 2vh;
-    text-transform: uppercase;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,6 +28,8 @@
 h3 {
     margin: 0; /* Remueve los márgenes por defecto */
     padding-bottom: 10px; /* Espacio debajo del título */
+    color: white;
+    text-transform: uppercase;
 }
 
 hr {
@@ -42,6 +43,26 @@ p {
     overflow-wrap: break-word; /* Asegura que el texto se ajuste dentro del recuadro */
     word-break: break-word; /* Permite que las palabras largas se rompan y ajusten dentro del recuadro */
 }
+
+/* Estilo para el contenedor de parallax */
+.parallax-container {
+    position: relative;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+  }
+  
+  .parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/fondo2.jpg'); /* Cambia la ruta a tu imagen */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
 
 @media (max-width: 600px) {
     .box, .box1 {

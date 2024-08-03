@@ -1,39 +1,35 @@
-<div class="form-container">
-  <form novalidate (ngSubmit)="onSubmit()" [formGroup]="contact" style="margin-top: 25px;">
-    <p-floatLabel>
-      <input pInputText id="name" formControlName="name"/>
-      <label for="username1">Nombre*</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input pInputText id="mail" formControlName="mail" />
-      <label for="username2">Mail*</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input pInputText id="tlf" formControlName="tlf"  />
-      <label for="username3">Teléfono</label>
-    </p-floatLabel>
-    <small id="username-help"><span style="color:white">Dejanos tu tlf y contactaremos mas rapidamente.</span>      
-  </small>
-    <p-floatLabel>
-      <textarea 
-        id="float-input" 
-        rows="5" 
-        cols="30" 
-        pInputTextarea
-        formControlName="messagge"
-        >
-      </textarea>
-      <label for="float-input">Explicanos detalladamente tu evento*</label>
-    </p-floatLabel>
-    <button *ngIf="contact.valid"
-    mat-raised-button
-    color="primary">
-    Enviar
-  </button>
-    <!-- <p-button 
-      label="Aceptar" 
-      icon="pi pi-check" 
-      [loading]="loading" 
-      (onClick)="load()" /> -->
-  </form>
+<div class="parallax-container">
+  <div class="parallax-background"></div>
+  <div class="form-container">
+    <form novalidate (ngSubmit)="onSubmit()" [formGroup]="contact">
+      <p-floatLabel>
+        <input pInputText id="name" formControlName="name"/>
+        <label for="username1">Nombre*</label>
+      </p-floatLabel>
+      <p-floatLabel>
+        <input pInputText id="mail" formControlName="mail" />
+        <label for="username2">Mail*</label>
+      </p-floatLabel>
+      <p-floatLabel>
+        <input pInputText id="tlf" formControlName="tlf"  />
+        <label for="username3">Teléfono</label>
+      </p-floatLabel>
+      <small id="username-help"><span style="color:white">Dejanos tu tlf y contactaremos más rápidamente.</span></small>
+      <p-floatLabel>
+        <textarea 
+          id="float-input" 
+          rows="5" 
+          cols="30" 
+          pInputTextarea
+          formControlName="messagge">
+        </textarea>
+        <label for="float-input">Explícanos detalladamente tu evento*</label>
+      </p-floatLabel>
+      <button *ngIf="contact.valid"
+        mat-raised-button
+        color="primary">
+        Enviar
+      </button>
+    </form>
+  </div>
 </div>
