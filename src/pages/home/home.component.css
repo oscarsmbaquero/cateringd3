@@ -46,17 +46,19 @@
   }
   
   .box {
-    background: #b60c0c;
+    background: linear-gradient(to right, #18e2e9, #ffffff);
   }
   
   .box1 {
-    background: #3103c9;
+    background: #e13053;
+    background: linear-gradient(to right,  #e13053, #e8e1e3);
   }
   
   h3 {
     margin: 0;
     padding-bottom: 10px;
-    color: white;
+    font-weight: bold;
+    color: black;
     text-transform: uppercase;
   }
   
