@@ -83,6 +83,10 @@
       max-width: 100%; /* Permite que las cajas ocupen todo el ancho disponible */
     }
   }
+
+  /* .photo{
+    width: "250px"
+  } */
   
   /* Ajustes específicos para dispositivos móviles */
   @media (max-width: 600px) {
@@ -91,4 +95,36 @@
       padding: 20px;
     }
   }
+
+  .photo {
+    width: 100%; /* Asegura que la imagen sea responsiva */
+    max-width: 450px; /* Tamaño máximo por defecto */
+  }
   
+  @media (max-width: 1200px) {
+    .photo {
+      max-width: 400px; /* Tamaño máximo para pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .photo {
+      max-width: 350px; /* Tamaño máximo para pantallas más pequeñas */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .photo {
+      max-width: 300px; /* Tamaño máximo para tabletas */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .photo {
+      max-width: 250px; /* Tamaño máximo para móviles */
+    }
+  }
+  
+  /* .photo{
+    width: "350px"
+  } */
