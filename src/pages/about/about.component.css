@@ -63,6 +63,7 @@ body {
   .boton{
     background-color: rgba(189, 28, 14, 0.8) ;
     border: none;
+    padding-bottom: 5px;
   }
   .boton p{
     color: white;
