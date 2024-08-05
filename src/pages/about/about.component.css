@@ -1,8 +1,8 @@
-body {
+inicio {
     font-family: Arial, sans-serif;
-    margin: 0;
+    /* margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; */
   }
   
   header {
@@ -53,13 +53,23 @@ body {
     padding: 1em;
     margin-top: -3em;
   }
+  /* @media (min-width: 768px) {
+    .intro-text {
+      background-color: rgba(189, 28, 14, 0.8);
+      padding: 15px;
+      display: inline-block;
+      padding: 1em;
+      margin-top: -3em;
+      margin-left: 5px;
+    }
+  } */
 
-  .intro-text2 {
+  /* .intro-text2 {
     background-color: rgba(189, 28, 14, 0.8);
     display: inline-block;
     padding: 1em;
     margin-top: -3em;
-  }
+  } */
   .boton{
     background-color: rgba(189, 28, 14, 0.8) ;
     border: none;
