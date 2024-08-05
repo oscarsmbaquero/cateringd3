@@ -54,6 +54,20 @@ body {
     margin-top: -3em;
   }
 
+  .intro-text2 {
+    background-color: rgba(189, 28, 14, 0.8);
+    display: inline-block;
+    padding: 1em;
+    margin-top: -3em;
+  }
+  .boton{
+    background-color: rgba(189, 28, 14, 0.8) ;
+    border: none;
+  }
+  .boton p{
+    color: white;
+  }
+
   .square {
     width: 200px;
     height: 200px;
