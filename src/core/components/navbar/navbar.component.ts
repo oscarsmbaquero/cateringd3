@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router'; // Import the RouterModule here
-
+import { Subscription } from 'rxjs';
 import { NavbarService } from '../../services/navbarService/navbar.service';
 
 @Component({
@@ -11,18 +11,29 @@ import { NavbarService } from '../../services/navbarService/navbar.service';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit, OnDestroy {
 
   currentTheme = 'dark';
-
-  selectedOption: any;
+  selectedOption: string | undefined;
+  private subscription: Subscription = new Subscription;
 
   constructor( private navbarService: NavbarService){
 
   }
 
+  ngOnInit(): void {
+    this.subscription = this.navbarService.selectedOption$.subscribe(option => {
+      this.selectedOption = option;
+    });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+
   selectOption(option: string) {
-    this.selectedOption = option;
+    this.navbarService.setSelectedOption(option);
+    //this.selectedOption = option;
     this.toggleNavbar();
   }
 
