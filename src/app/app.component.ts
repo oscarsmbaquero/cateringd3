@@ -13,4 +13,12 @@ import { FooterComponent } from '../core/components/footer/footer.component';
 })
 export class AppComponent {
   title = 'cateringd3';
+
+  redirigirWhatsapp() {
+    const telefono = '+34678623776'; // Reemplaza esto con el número de teléfono deseado
+    const url = `https://wa.me/${telefono}`;
+
+    // Abre la URL de WhatsApp en la misma ventana o pestaña
+    window.location.href = url;
+  }
 }

@@ -2,3 +2,21 @@
     /* min-height: 400px; */
     /* width: 600px; */
 }
+
+.floating-button-what {
+    position: fixed; /* Esto lo mantendrá en una posición fija en la ventana */
+    bottom: 40px; /* Puedes ajustar la distancia desde la parte inferior según tus necesidades */
+    right: 13px; /* Puedes ajustar la distancia desde la derecha según tus necesidades */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    border-radius: 50%; /* Esto hará que el botón sea circular */
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Altura del botón */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+  }
