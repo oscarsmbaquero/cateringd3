@@ -35,7 +35,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.subscription = this.navbarService.selectedOption$.subscribe(option => {
       this.selectedOption = option;
     });
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang('es');
   }
 
   ngOnDestroy() {
