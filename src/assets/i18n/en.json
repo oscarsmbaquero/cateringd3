@@ -15,5 +15,9 @@
     "LISTADO-SEGUNDA-CARD-FOUR": "Balance in the Kitchen",
     "LISTADO-SEGUNDA-CARD-FIVE": "Live Breakfasts",
     "TEXTO-ULTIMA-CARD": "Tell us about your event, and we’ll provide the best solution"
+  },
+  "HOME":{
+    "PRIMERA-CARD-TITLE": "CINEMA",
+    "SEGUNDA-CARD-TITLE": "EVENTS"
   }
 }

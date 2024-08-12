@@ -15,6 +15,10 @@
     "LISTADO-SEGUNDA-CARD-FOUR": "Equilibrio entre fogones",
     "LISTADO-SEGUNDA-CARD-FIVE": "Desayunos en vivo",
     "TEXTO-ULTIMA-CARD":"CUÉNTANOS TU EVENTO Y TE DAREMOS LA MEJOR SOLUCIÓN"
+  },
+  "HOME":{
+    "PRIMERA-CARD-TITLE": "CINE",
+    "SEGUNDA-CARD-TITLE": "EVENTOS"
   }
 
   }
