@@ -1,8 +1,19 @@
 {
-  "NAVBAR":{
+  "NAVBAR": {
     "HOME": "Home",
-    "NOSOTROS": "About us",
+    "NOSOTROS": "About Us",
     "SERVICIOS": "Services",
     "CONTACTO": "Contact"
+  },
+  "NOSOTROS": {
+    "TITLE-PRIMERA-CARD": "Welcome to D3 Catering",
+    "DESCRIPTION-PRIMERA-CARD": "We provide specialized catering for film shoots and private events.",
+    "TITLE-SEGUNDA-CARD": "At D3, we offer:",
+    "LISTADO-SEGUNDA-CARD-FIRST": "Quality Products",
+    "LISTADO-SEGUNDA-CARD-SECOND": "Personalized Service",
+    "LISTADO-SEGUNDA-CARD-THIRD": "Human Quality",
+    "LISTADO-SEGUNDA-CARD-FOUR": "Balance in the Kitchen",
+    "LISTADO-SEGUNDA-CARD-FIVE": "Live Breakfasts",
+    "TEXTO-ULTIMA-CARD": "Tell us about your event, and we’ll provide the best solution"
   }
 }
