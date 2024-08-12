@@ -41,72 +41,52 @@
     </label>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <!--primera lista-->
-      <ul
-        class="navbar-nav me-auto my-2 my-lg-0" style="padding: 15px">
-        <li class="nav-item" routerLinkActive="active"
-        (click)="selectOption('home')" [class.selected]="selectedOption === 'home'">
-          <a
-            class="nav-link"
-            [routerLink]="['']"
-            data-toggle="collapse"
-            data-target=".navbar-collapse.show"
-            ><span
-              >Home</span
-            ></a
-          >
+      <ul class="navbar-nav me-auto my-2 my-lg-0" style="padding: 15px">
+        <li class="nav-item" routerLinkActive="active" (click)="selectOption('home')" [class.selected]="selectedOption === 'home'">
+          <a class="nav-link" [routerLink]="['']" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <span>{{"NAVBAR.HOME" | translate }}</span>
+          </a>
         </li>
         <hr class="dropdown-divider" />
         <li (click)="selectOption('about')" [class.selected]="selectedOption === 'about'" class="nav-item" routerLinkActive="active">
-          <a
-            class="nav-link"
-            [routerLink]="['/about_us']"
-            data-toggle="collapse"
-            data-target=".navbar-collapse.show"
-            ><span
-              [ngClass]="{
-                'dark-theme': currentTheme === 'dark',
-                'light-theme': currentTheme === 'light'
-              }"
-              >Sobre Nosotros</span
-            ></a
-          >
+          <a class="nav-link" [routerLink]="['/about_us']" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <span [ngClass]="{'dark-theme': currentTheme === 'dark', 'light-theme': currentTheme === 'light'}">
+              {{"NAVBAR.NOSOTROS" | translate }}
+            </span>
+          </a>
         </li>
         <hr class="dropdown-divider" />
         <li (click)="selectOption('servicios')" [class.selected]="selectedOption === 'servicios'" class="nav-item" routerLinkActive="active">
-          <a
-            class="nav-link"
-            [routerLink]="['/servicios']"
-            data-toggle="collapse"
-            data-target=".navbar-collapse.show"
-            ><span
-              [ngClass]="{
-                'dark-theme': currentTheme === 'dark',
-                'light-theme': currentTheme === 'light'
-              }"
-              >Servicios</span
-            ></a
-          >
+          <a class="nav-link" [routerLink]="['/servicios']" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <span [ngClass]="{'dark-theme': currentTheme === 'dark', 'light-theme': currentTheme === 'light'}">
+              {{"NAVBAR.SERVICIOS" | translate}}
+            </span>
+          </a>
         </li>
         <hr class="dropdown-divider" />
         <li (click)="selectOption('contact')" [class.selected]="selectedOption === 'contact'" class="nav-item" routerLinkActive="active">
-          <a
-            class="nav-link"
-            [routerLink]="['/contact']"
-            data-toggle="collapse"
-            data-target=".navbar-collapse.show"
-            ><span
-              [ngClass]="{
-                'dark-theme': currentTheme === 'dark',
-                'light-theme': currentTheme === 'light'
-              }"
-              >Contacto</span
-            ></a
-          >
+          <a class="nav-link" [routerLink]="['/contact']" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <span [ngClass]="{'dark-theme': currentTheme === 'dark', 'light-theme': currentTheme === 'light'}">
+              {{"NAVBAR.CONTACTO" | translate}}
+            </span>
+          </a>
         </li>
-        
-        <hr  />
-        <!-- *ngIf="activeUser" class="dropdown-divider" -->
+        <hr class="dropdown-divider" />
       </ul>
+        <ul class="ms-auto">
+          <li>
+            <span *ngIf="languageSelected === 'es'" (click)="useLanguage('en')">
+              <img src="../../../assets/images/england.png" width="25px"/>
+            </span>
+            <span *ngIf="languageSelected === 'en'" (click)="useLanguage('es')">
+              <img src="../../../assets/images/spain.png" width="45px"/>
+            </span>
+          </li>
+        </ul>
+        
+        <hr />
+      
+      
       <!--segunda lista-->
     </div>
   </div>

@@ -1,20 +1,42 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 //COMPONENTS
 import { NavbarComponent } from '../core/components/navbar/navbar.component';
 import { FooterComponent } from '../core/components/footer/footer.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, NavbarComponent, FooterComponent, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  providers:[
+    TranslateService
+  ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  languajes =[ 'es', 'en'];
+  //private translateService = inject(TranslateService)
   title = 'cateringd3';
   scrollPosition = 0;
+
+  ngOnInit(): void {
+    const defaultLanguaje = localStorage.getItem('languaje') || 'es';
+    //this.translateService.setDefaultLang(defaultLanguaje);
+    //this.translateService.use(defaultLanguaje);
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    
+  }
+
+  // changeLAnguaje(lang: string){
+  //   this.translateService.use(lang);
+  //   localStorage.setItem('languaje', lang)
+
+  // }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
