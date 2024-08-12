@@ -4,5 +4,17 @@
     "NOSOTROS": "Sobre nosotros",
     "SERVICIOS": "Servicios",
     "CONTACTO": "Contacto"
+  },
+  "NOSOTROS":{
+    "TITLE-PRIMERA-CARD": "Bienvenidos a D3 Catering",
+    "DESCRIPTION-PRIMERA-CARD": "Proveemos catering especializado para rodajes y eventos particulares.",
+    "TITLE-SEGUNDA-CARD": "En D3 ofrecemos:",
+    "LISTADO-SEGUNDA-CARD-FIRST": "Productos de Calidad",
+    "LISTADO-SEGUNDA-CARD-SECOND": "Atención personalizada",
+    "LISTADO-SEGUNDA-CARD-THIRD": "Calidad humana",
+    "LISTADO-SEGUNDA-CARD-FOUR": "Equilibrio entre fogones",
+    "LISTADO-SEGUNDA-CARD-FIVE": "Desayunos en vivo",
+    "TEXTO-ULTIMA-CARD":"CUÉNTANOS TU EVENTO Y TE DAREMOS LA MEJOR SOLUCIÓN"
   }
+
   }
