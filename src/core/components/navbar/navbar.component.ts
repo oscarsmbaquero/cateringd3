@@ -3,21 +3,30 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router'; // Import the RouterModule here
 import { Subscription } from 'rxjs';
 import { NavbarService } from '../../services/navbarService/navbar.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslationService } from '../../services/translateService/translate.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent implements OnInit, OnDestroy {
 
   currentTheme = 'dark';
+
+  languageSelected = 'es';
+
   selectedOption: string | undefined;
   private subscription: Subscription = new Subscription;
 
-  constructor( private navbarService: NavbarService){
+  constructor( 
+    private navbarService: NavbarService,
+    public translate: TranslateService,
+    public translationService: TranslationService
+  ){
 
   }
 
@@ -25,6 +34,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.subscription = this.navbarService.selectedOption$.subscribe(option => {
       this.selectedOption = option;
     });
+    this.translate.setDefaultLang('en');
   }
 
   ngOnDestroy() {
@@ -40,6 +50,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
   toggleNavbar() {
     this.navbarService.collapseNavbar();
     
+  }
+
+  useLanguage(language: string){
+    console.log('entro', language);  
+    this.languageSelected = language
+    this.translationService.changeLanguage(language);  
   }
 
 }
