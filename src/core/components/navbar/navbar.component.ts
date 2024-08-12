@@ -21,6 +21,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   selectedOption: string | undefined;
   private subscription: Subscription = new Subscription;
+  selectedLanguage: string | undefined;
 
   constructor( 
     private navbarService: NavbarService,
@@ -54,8 +55,10 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   useLanguage(language: string){
     console.log('entro', language);  
-    this.languageSelected = language
+    this.languageSelected = language;
+    this.selectedLanguage = language;
     this.translationService.changeLanguage(language);  
+    this.toggleNavbar();
   }
 
 }
