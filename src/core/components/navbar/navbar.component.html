@@ -75,11 +75,21 @@
       </ul>
         <ul class="ms-auto">
           <li>
-            <span *ngIf="languageSelected === 'es'" (click)="useLanguage('en')">
-              <img src="../../../assets/images/england.png" width="25px"/>
+            <span (click)="useLanguage('en')" 
+            style="padding-right:10px;">
+              <img src="../../../assets/images/england.png" width="25px"
+              [ngClass]="{'selected-item': selectedLanguage === 'en'}"
+              />
             </span>
-            <span *ngIf="languageSelected === 'en'" (click)="useLanguage('es')">
-              <img src="../../../assets/images/spain.png" width="45px"/>
+            <span (click)="useLanguage('euz')"            
+            >
+              <img src="../../../assets/images/ikurrina.png" width="25px"
+              [ngClass]="{'selected-item': selectedLanguage === 'euz'}"/>
+            </span>
+            <span (click)="useLanguage('es')">
+              <img src="../../../assets/images/spain.png" width="48px"
+              [ngClass]="{'selected-item': selectedLanguage === 'es'}"
+              />
             </span>
           </li>
         </ul>

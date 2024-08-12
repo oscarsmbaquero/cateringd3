@@ -1,0 +1,20 @@
+{
+    "NAVBAR": {
+      "HOME": "Hasiera",
+      "NOSOTROS": "Guri buruz",
+      "SERVICIOS": "Zerbitzuak",
+      "CONTACTO": "Kontaktua"
+    },
+    "NOSOTROS": {
+      "TITLE-PRIMERA-CARD": "Ongi etorri D3 Catering-era",
+      "DESCRIPTION-PRIMERA-CARD": "Rodaje eta ekitaldi partikularretarako espezializatutako catering zerbitzua eskaintzen dugu.",
+      "TITLE-SEGUNDA-CARD": "D3-n eskaintzen dugu:",
+      "LISTADO-SEGUNDA-CARD-FIRST": "Kalitatezko produktuak",
+      "LISTADO-SEGUNDA-CARD-SECOND": "Arreta pertsonalizatua",
+      "LISTADO-SEGUNDA-CARD-THIRD": "Giza kalitatea",
+      "LISTADO-SEGUNDA-CARD-FOUR": "Sukaldeko oreka",
+      "LISTADO-SEGUNDA-CARD-FIVE": "Zuzeneko gosariak",
+      "TEXTO-ULTIMA-CARD": "KONTATU ZURE EKITALDIA ETA SOLUZIO ONENA EMANGO DIZUGU"
+    }
+  }
+  
