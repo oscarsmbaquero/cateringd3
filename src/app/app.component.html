@@ -11,5 +11,15 @@
       alt=""
     />
   </div>
+  <div  (click)="abrirModal()">
+    <img
+      src="assets/images/ajustes.webp"
+      class="floating-button-ajustes"
+      width="55"
+      height="55"
+      alt=""
+    />
+  </div>
 </div>
+<app-modal-config *ngIf="modalAbierto" [isVisible]="modalAbierto"></app-modal-config>
 <app-footer></app-footer>

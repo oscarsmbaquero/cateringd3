@@ -19,6 +19,10 @@
   "HOME":{
     "PRIMERA-CARD-TITLE": "CINE",
     "SEGUNDA-CARD-TITLE": "EVENTOS"
+  },
+  "MODAL":{
+    "TITLE": "Configuración",
+    "TEXT": "Selecciona tu idioma"
   }
 
   }

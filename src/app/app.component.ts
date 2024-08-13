@@ -5,12 +5,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 //COMPONENTS
 import { NavbarComponent } from '../core/components/navbar/navbar.component';
 import { FooterComponent } from '../core/components/footer/footer.component';
+import { ModalConfigComponent } from '../shared/components/modal.config/modal.config.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, FooterComponent, CommonModule],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, CommonModule, ModalConfigComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   providers:[
@@ -22,6 +23,8 @@ export class AppComponent implements OnInit {
   //private translateService = inject(TranslateService)
   title = 'cateringd3';
   scrollPosition = 0;
+
+  modalAbierto : boolean | undefined;
 
   ngOnInit(): void {
     const defaultLanguaje = localStorage.getItem('languaje') || 'es';
@@ -57,5 +60,9 @@ export class AppComponent implements OnInit {
 
     // Abre la URL de WhatsApp en la misma ventana o pestaña
     window.location.href = url;
+  }
+
+  abrirModal() {    
+    this.modalAbierto = true;
   }
 }
