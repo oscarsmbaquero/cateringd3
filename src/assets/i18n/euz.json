@@ -19,6 +19,9 @@
     "HOME":{
       "PRIMERA-CARD-TITLE": "ZINEMA",
       "SEGUNDA-CARD-TITLE": "GERTAKIZUM"
-    }
+    },"MODAL": {
+    "TITLE": "Konfigurazioa",
+    "TEXT": "Hautatu zure hizkuntza"
+}
   }
   
