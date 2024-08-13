@@ -1,12 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-
+import { TranslationService } from '../../../core/services/translateService/translate.service';
+//PRIMENG
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
-import { EventService } from '../../../core/services/modalOpiniones/modal.service';
-import { TranslationService } from '../../../core/services/translateService/translate.service';
-import { NavbarService } from '../../../core/services/navbarService/navbar.service';
-
 
 @Component({
   selector: 'app-modal-config',
@@ -15,36 +12,60 @@ import { NavbarService } from '../../../core/services/navbarService/navbar.servi
   templateUrl: './modal.config.component.html',
   styleUrl: './modal.config.component.css'
 })
-export class ModalConfigComponent {
+export class ModalConfigComponent implements OnInit {
+
+@Output() closeModalEvent = new EventEmitter<void>();
 
 @Input() isVisible: boolean = false;
+
   languageSelected: string | undefined;
+
   selectedLanguage: string | undefined;
+  
+  banderaUrl: string = '';
 
-constructor(
-  private eventService: EventService,
-  public translationService: TranslationService,
-  private navbarService: NavbarService
-){
+constructor(public translationService: TranslationService){}
 
+ngOnInit(): void {
+  this.languageActual();
 }
 
 onCloseModal() {
-  console.log('entro cerrar modal');
-  
-  this.eventService.closeModal();
+  this.closeModalEvent.emit(); 
 }
 
 
 useLanguage(language: string){
-  console.log('entro', language);  
   this.languageSelected = language;
   this.selectedLanguage = language;
   this.translationService.changeLanguage(language);
-  //this.navbarService.collapseNavbar();
   this.onCloseModal();
 }
 
-  //visible: boolean = false;
+languageActual(){
+  const prueba = this.translationService.getCurrentLanguage();  
+  this.banderaUrl = this.pintarIdioma(prueba);
+}
+
+pintarIdioma(idioma: string): string {
+  let rutaBandera = '';
+
+  switch (idioma) {
+    case 'es': // Español
+      rutaBandera = '../../../assets/images/spain.png';
+      break;
+    case 'en': // Inglés
+      rutaBandera = '../../../assets/images/england.png';
+      break;
+    case 'euz': // Euskera
+      rutaBandera = '../../../assets/images/ikurrina.png';
+      break;
+    default:
+      rutaBandera = '../../../assets/images/spain.png';
+  }
+
+  return rutaBandera;
+}
+
 
 }

@@ -18,28 +18,11 @@ import { ModalConfigComponent } from '../shared/components/modal.config/modal.co
     TranslateService
   ]
 })
-export class AppComponent implements OnInit {
-  languajes =[ 'es', 'en'];
-  //private translateService = inject(TranslateService)
+export class AppComponent  {
   title = 'cateringd3';
   scrollPosition = 0;
 
-  modalAbierto : boolean | undefined;
-
-  ngOnInit(): void {
-    const defaultLanguaje = localStorage.getItem('languaje') || 'es';
-    //this.translateService.setDefaultLang(defaultLanguaje);
-    //this.translateService.use(defaultLanguaje);
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    
-  }
-
-  // changeLAnguaje(lang: string){
-  //   this.translateService.use(lang);
-  //   localStorage.setItem('languaje', lang)
-
-  // }
+  modalAbierto : boolean | undefined;    
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -47,7 +30,6 @@ export class AppComponent implements OnInit {
   }
 
   scrollToTop() {
-    // Usa JavaScript puro para hacer scroll suavemente hacia arriba
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -57,12 +39,14 @@ export class AppComponent implements OnInit {
   redirigirWhatsapp() {
     const telefono = '+34678623776'; // Reemplaza esto con el número de teléfono deseado
     const url = `https://wa.me/${telefono}`;
-
-    // Abre la URL de WhatsApp en la misma ventana o pestaña
     window.location.href = url;
   }
 
   abrirModal() {    
     this.modalAbierto = true;
+  }
+
+  cerrarModal() {
+    this.modalAbierto = false;
   }
 }
