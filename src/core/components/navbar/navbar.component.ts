@@ -19,6 +19,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   languageSelected = 'es';
 
+  banderaUrl: string = '';
+
+  currentLanguage: string | undefined;
+
+  textoIdioma = '';
+
   selectedOption: string | undefined;
   private subscription: Subscription = new Subscription;
   selectedLanguage: string | undefined;
@@ -36,6 +42,17 @@ export class NavbarComponent implements OnInit, OnDestroy {
       this.selectedOption = option;
     });
     this.translate.setDefaultLang('es');
+    this.translationService.getCurrentLanguage().subscribe(lang => {
+      //this.currentLanguage = lang;
+      //this.updateFlag(lang); // Método que cambia la bandera
+      console.log(lang);
+      this.textoIdioma =  lang.charAt(0).toUpperCase() + lang.slice(1);
+      this.currentLanguage =this.pintarIdioma(lang);
+      console.log(this.currentLanguage);
+      
+      
+    });
+    //this.languageActual();
   }
 
   ngOnDestroy() {
@@ -59,6 +76,33 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.selectedLanguage = language;
     this.translationService.changeLanguage(language);  
     this.toggleNavbar();
+  }
+
+  // languageActual(){
+  //   const prueba = this.translationService.getCurrentLanguage();  
+  //   this.banderaUrl = this.pintarIdioma(prueba);
+  //   console.log(this.banderaUrl);
+    
+  // }
+
+  pintarIdioma(idioma: string): string {
+    let rutaBandera = '';
+  
+    switch (idioma) {
+      case 'es': // Español
+        rutaBandera = '../../../assets/images/spain.png';
+        break;
+      case 'en': // Inglés
+        rutaBandera = '../../../assets/images/england.png';
+        break;
+      case 'euz': // Euskera
+        rutaBandera = '../../../assets/images/ikurrina.png';
+        break;
+      default:
+        rutaBandera = '../../../assets/images/spain.png';
+    }
+  
+    return rutaBandera;
   }
 
 }
