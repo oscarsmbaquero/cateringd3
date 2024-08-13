@@ -1,0 +1,28 @@
+<p-dialog [header]="'MODAL.TITLE' | translate" [modal]="true"  
+(onHide)="onCloseModal()"
+[(visible)]="isVisible" [style]="{ width: '25rem' }">
+    <span class="p-text-secondary block mb-5">{{"MODAL.TEXT" | translate}}</span>
+    <div class="flex align-items-center gap-3 mb-3">
+        <span (click)="useLanguage('en')" 
+        style="padding-right:10px;">
+          <img src="../../../assets/images/england.png" width="25px"
+          />
+        </span>
+        <span (click)="useLanguage('euz')"            
+        >
+          <img src="../../../assets/images/ikurrina.png" width="25px"
+/>
+        </span>
+        <span (click)="useLanguage('es')">
+          <img src="../../../assets/images/spain.png" width="48px"
+          />
+        </span>
+    </div>
+    <!-- <div class="flex align-items-center gap-3 mb-5">
+        <label for="email" class="font-semibold w-6rem">Email</label>
+        <input pInputText id="email" class="flex-auto" autocomplete="off" />
+    </div> -->
+    <!-- <div class="flex justify-content-end gap-2">
+        <p-button label="Cancel" severity="secondary" (onClick)="onCloseModal()" />
+    </div> -->
+</p-dialog>
