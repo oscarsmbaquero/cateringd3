@@ -1,8 +1,7 @@
-
 <app-navbar></app-navbar>
 <div class="main">
-<router-outlet></router-outlet>
-<div  (click)="redirigirWhatsapp()">
+  <router-outlet></router-outlet>
+  <div (click)="redirigirWhatsapp()">
     <img
       src="assets/images/whats.png"
       class="floating-button-what"
@@ -11,7 +10,7 @@
       alt=""
     />
   </div>
-  <div  (click)="abrirModal()">
+  <div (click)="abrirModal()">
     <img
       src="assets/images/ajustes.webp"
       class="floating-button-ajustes"
@@ -21,5 +20,9 @@
     />
   </div>
 </div>
-<app-modal-config *ngIf="modalAbierto" [isVisible]="modalAbierto"></app-modal-config>
+<app-modal-config
+  *ngIf="modalAbierto"
+  [isVisible]="modalAbierto"
+  (closeModalEvent)="cerrarModal()"
+></app-modal-config>
 <app-footer></app-footer>
