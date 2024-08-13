@@ -27,7 +27,7 @@ export class ModalConfigComponent implements OnInit {
 constructor(public translationService: TranslationService){}
 
 ngOnInit(): void {
-  this.languageActual();
+  //this.languageActual();
 }
 
 onCloseModal() {
@@ -42,30 +42,30 @@ useLanguage(language: string){
   this.onCloseModal();
 }
 
-languageActual(){
-  const prueba = this.translationService.getCurrentLanguage();  
-  this.banderaUrl = this.pintarIdioma(prueba);
-}
+// languageActual(){
+//   const prueba = this.translationService.getCurrentLanguage();  
+//   this.banderaUrl = this.pintarIdioma(prueba);
+// }
 
-pintarIdioma(idioma: string): string {
-  let rutaBandera = '';
+// pintarIdioma(idioma: string): string {
+//   let rutaBandera = '';
 
-  switch (idioma) {
-    case 'es': // Español
-      rutaBandera = '../../../assets/images/spain.png';
-      break;
-    case 'en': // Inglés
-      rutaBandera = '../../../assets/images/england.png';
-      break;
-    case 'euz': // Euskera
-      rutaBandera = '../../../assets/images/ikurrina.png';
-      break;
-    default:
-      rutaBandera = '../../../assets/images/spain.png';
-  }
+//   switch (idioma) {
+//     case 'es': // Español
+//       rutaBandera = '../../../assets/images/spain.png';
+//       break;
+//     case 'en': // Inglés
+//       rutaBandera = '../../../assets/images/england.png';
+//       break;
+//     case 'euz': // Euskera
+//       rutaBandera = '../../../assets/images/ikurrina.png';
+//       break;
+//     default:
+//       rutaBandera = '../../../assets/images/spain.png';
+//   }
 
-  return rutaBandera;
-}
+//   return rutaBandera;
+// }
 
 
 }
