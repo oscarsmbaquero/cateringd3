@@ -1,15 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
 import { TranslateModule } from '@ngx-translate/core';
+import { TranslationService } from '../../core/services/translateService/translate.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
+
+  selectedLanguage: string | undefined;
+
+  constructor(public translationService: TranslationService){
+
+  }
 
   ngOnInit() {
     AOS.init({
@@ -17,6 +25,13 @@ export class HomeComponent implements OnInit {
       delay: 550,
       once: true
     });//AOS - 2
-    AOS.refresh();//refresh method is called on window resize and so on, as it doesn't require to build new store with AOS elements and should be as light as possible.
+    AOS.refresh();
+    this.languageActual();
+  }
+
+  languageActual(){
+    this.translationService.getCurrentLanguage().subscribe(lang => {
+      this.selectedLanguage = lang;      
+    });
   }
 }
