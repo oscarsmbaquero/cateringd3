@@ -23,6 +23,12 @@
   "MODAL":{
     "TITLE": "Configuratión",
     "TEXT": "Select your language"
-  }
+  },
+  "CONTACTO": {
+    "NOMBRE": "Name*",
+    "MAIL": "Email*",
+    "TELEFONO": "Phone",
+    "TEXT-AREA": "Explain your event in detail*"
+}
 
 }

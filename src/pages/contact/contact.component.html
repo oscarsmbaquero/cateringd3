@@ -4,15 +4,15 @@
     <form novalidate (ngSubmit)="onSubmit()" [formGroup]="contact">
       <p-floatLabel>
         <input pInputText id="name" formControlName="name"/>
-        <label for="username1">Nombre*</label>
+        <label for="username1">{{"CONTACTO.NOMBRE" | translate}}</label>
       </p-floatLabel>
       <p-floatLabel>
         <input pInputText id="mail" formControlName="mail" />
-        <label for="username2">Mail*</label>
+        <label for="username2">{{"CONTACTO.MAIL" | translate}}</label>
       </p-floatLabel>
       <p-floatLabel>
         <input pInputText id="tlf" formControlName="tlf"  />
-        <label for="username3">Teléfono</label>
+        <label for="username3">{{"CONTACTO.TELEFONO" | translate}}</label>
       </p-floatLabel>
       <!-- <small id="username-help"><span style="color:white">Déjanos tu tlf para comunicarnos mas rapidamente</span></small> -->
       <p-floatLabel>
@@ -23,7 +23,7 @@
           pInputTextarea
           formControlName="messagge">
         </textarea>
-        <label for="float-input">Explícanos detalladamente tu evento*</label>
+        <label for="float-input">{{"CONTACTO.TEXT-AREA" | translate}}</label>
       </p-floatLabel>
       <!-- *ngIf="contact.valid" -->
       <button 

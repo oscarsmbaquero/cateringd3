@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
@@ -6,15 +6,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { ButtonModule } from 'primeng/button';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { TranslationService } from '../../core/services/translateService/translate.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FloatLabelModule, FormsModule, InputTextModule, ButtonModule, InputTextareaModule, ReactiveFormsModule],
+  imports: [CommonModule, FloatLabelModule, FormsModule, InputTextModule, ButtonModule, InputTextareaModule, ReactiveFormsModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit{
   value: string | undefined;
 
   public contact: FormGroup;
@@ -23,10 +25,12 @@ export class ContactComponent {
 
   loading: boolean = false;
   public submitted: boolean = false;
+  selectedLanguage: string | undefined;
 
   constructor(
     private formBuilder: FormBuilder,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    public translationService: TranslationService
     
   ) {
     this.contact = this.formBuilder.group({
@@ -34,6 +38,16 @@ export class ContactComponent {
       mail: ['', [Validators.required]],
       tlf: [''],
       messagge: ['', [Validators.required]],
+    });
+  }
+
+  ngOnInit(): void {
+    this.languageActual();
+  }
+
+  languageActual(){
+    this.translationService.getCurrentLanguage().subscribe(lang => {
+      this.selectedLanguage = lang;      
     });
   }
 
